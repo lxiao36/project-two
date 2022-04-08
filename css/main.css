@@ -1,0 +1,202 @@
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  background: rgb(248, 218, 185);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cover-heading {
+  margin-top: 70px;
+  font-size: 70px;
+  color: #dd6700;
+  font-family: "Roboto", sans-serif;
+}
+
+.lead {
+  font-size: 22px;
+  line-height: 40px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  color: black;
+}
+
+/* Navbar */
+nav {
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+
+.logohead {
+  width: 300px;
+  height: auto;
+  padding-top: 10px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+a.active,
+a:hover {
+  background: rgb(51, 51, 51);
+}
+
+.checkdisplay {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 858px) {
+  .checkdisplay {
+    display: block;
+  }
+  ul {
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #000000;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #dd6700;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .cover-heading {
+    font-size: 42px;
+  }
+  .lead {
+    font-size: 18px;
+  }
+  .logohead {
+    width: 250px;
+    height: auto;
+  }
+}
+
+/* Card */
+.cards {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+
+.topics {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  background: #eb9952;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+}
+
+.content > * {
+  flex: 100%;
+}
+
+.content:hover {
+  color: white;
+}
+
+.content:hover a {
+  border-color: white;
+  background: white;
+}
+
+.content-background:hover {
+  border-color: #000000;
+  background: #000000;
+}
+
+.content-background:hover a {
+  color: #000000;
+}
+
+.content h2 {
+  font-size: 30px;
+  margin: 16px;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
+
+.content p {
+  font-size: 17px;
+}
+
+.content a {
+  margin: 22px;
+  background: black;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 858px) {
+  .topics {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
